@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+#notify-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px; 
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    border-radius: 15px; 
+    color: white;
+    background-color: #333; 
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s;
+    position: relative;
+    width: 100%; 
+    max-width: 350px; 
+}
+
+.notification .message {
+    flex-grow: 1;
+    margin-left: 15px; 
+}
+
+.notification .mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-radius: 15px 0 0 15px; 
+}
+
+.notification i {
+    font-size: 22px;
+    margin-right: 15px; 
+}
+
+.success {
+    background-color: #333; 
+}
+
+.success .mark {
+    background-color: green;
+}
+
+.info {
+    background-color: #333;
+}
+
+.info .mark {
+    background-color: #1d72b8;
+}
+
+.error {
+    background-color: #333;
+}
+
+.error .mark {
+    background-color: red;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
