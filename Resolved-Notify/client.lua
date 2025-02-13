@@ -22,18 +22,6 @@ AddEventHandler('customNotify:SendToAll', function(type, message, duration)
     })
 end)
 
--- Specific Player Notification Event (Targeted by Server)
-RegisterNetEvent('customNotify:SendToPlayer')
-AddEventHandler('customNotify:SendToPlayer', function(type, message, duration)
-    SendNUIMessage({
-        action = 'show',
-        type = type,
-        message = message,
-        duration = duration or 3000,
-        sound = "notify"
-    })
-end)
-
 -- Test Command for Client Notifications
 RegisterCommand('testnotify', function()
     TriggerEvent('customNotify:Send', 'success', 'This is a success message!', 5000)
