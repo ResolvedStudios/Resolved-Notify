@@ -41,4 +41,8 @@ ___
 -- Trigger notification sound
 TriggerEvent('customNotify:PlaySound', 'notify') -- Optional: This will play a notification sound
 ```
-## [Here is a reference on how it's used](...)
+## [Resolved Greenzones](https://github.com/ResolvedStudios/Resolved-Greenzones)
+In this script, I used Resolved Notify to notify the player of entering and exiting a zone!
+
+
+If the link does not work.. Here is a direct link: https://github.com/ResolvedStudios/Resolved-Greenzones
