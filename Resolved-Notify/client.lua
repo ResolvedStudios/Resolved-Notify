@@ -1,17 +1,40 @@
+-- Client-Only Notification Event
 RegisterNetEvent('customNotify:Send')
 AddEventHandler('customNotify:Send', function(type, message, duration)
-    local sound = "notify" 
-
     SendNUIMessage({
         action = 'show',
-        type = type, 
+        type = type,
         message = message,
-        duration = duration or 3000, 
-        sound = sound
+        duration = duration or 3000,
+        sound = "notify"
     })
 end)
 
--- Test notification command /testnotify 
+-- Global Notification Event (All Players)
+RegisterNetEvent('customNotify:SendToAll')
+AddEventHandler('customNotify:SendToAll', function(type, message, duration)
+    SendNUIMessage({
+        action = 'show',
+        type = type,
+        message = message,
+        duration = duration or 3000,
+        sound = "notify"
+    })
+end)
+
+-- Specific Player Notification Event (Targeted by Server)
+RegisterNetEvent('customNotify:SendToPlayer')
+AddEventHandler('customNotify:SendToPlayer', function(type, message, duration)
+    SendNUIMessage({
+        action = 'show',
+        type = type,
+        message = message,
+        duration = duration or 3000,
+        sound = "notify"
+    })
+end)
+
+-- Test Command for Client Notifications
 RegisterCommand('testnotify', function()
     TriggerEvent('customNotify:Send', 'success', 'This is a success message!', 5000)
     Wait(2000)
