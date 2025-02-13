@@ -1,5 +1,5 @@
 # Resolved Notify
-
+### Version: 1.5.0
 Resolved Notify is a lightweight and easy-to-implement notification system designed specifically for standalone FiveM servers. With just a simple trigger event, this system allows server administrators to display styled notifications that are fully customizable. Unlike other notification systems, Resolved Notify is standalone, meaning it doesn't require additional frameworks or dependencies to work.
 
 It offers a clean, user-friendly interface with customizable colors, icons, and positions for different notification types such as success, information, and error messages. The notifications automatically fade out after a set duration, ensuring a smooth user experience without any clutter. Whether you're managing server events, informing players of important messages, or simply adding aesthetic appeal to your server, Resolved Notify provides a seamless and straightforward solution.
@@ -41,6 +41,15 @@ ___
 -- Trigger notification sound
 TriggerEvent('customNotify:PlaySound', 'notify') -- Optional: This will play a notification sound
 ```
+### Trigger Notification for All Players (Global) - just added v1.5.0
+```LUA
+-- Trigger notification for all players
+TriggerServerEvent('customNotify:SendToAll', 'Type', 'MESSAGE GOES HERE', 4000)
+
+-- Trigger notification sound for all players
+TriggerServerEvent('customNotify:PlaySoundToAll', 'notify') -- Optional: This will play a notification sound
+```
+
 ## [Resolved Greenzones](https://github.com/ResolvedStudios/Resolved-Greenzones)
 In this script, I used Resolved Notify to notify the player of entering and exiting a zone!
 
